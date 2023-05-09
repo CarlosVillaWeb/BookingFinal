@@ -1,0 +1,4 @@
+.contenedor{
+    grid-area: "normas";
+    border:1px solid red;
+}

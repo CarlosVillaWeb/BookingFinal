@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "titulo": "Hoteles",
+        "descripcion": "807.105 hoteles" ,
+        "urlImagen": "https://www.take1locations.com/uploads/categories/HTL_20220620025651.jpg"
+    },
+    {
+        "id": "2",
+        "titulo": "Resorts",
+        "descripcion": "807.105 resorts",
+        "urlImagen": "https://www.take1locations.com/uploads/properties/20220607/wm/img_8ff6056a80fe169f014f50a3ad73f7d0667844c0.png"
+    },
+    {
+        "id": "3",
+        "titulo": "Departamentos",
+        "descripcion": "807.105 departamentos",
+        "urlImagen": "https://www.take1locations.com/uploads/properties/20220620/wm/img_d914a950d55fe4afe92f80388130e41f91f57515.png"
+    }, 
+
+    {
+        "id": "4",
+        "titulo": "Villas",
+        "descripcion": "807.105 villas",
+        "urlImagen": "https://www.take1locations.com/uploads/properties/20220701/wm/img_838389f1f48a0558ce996468337d50339a068eca.png"
+    }
+]

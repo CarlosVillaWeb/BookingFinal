@@ -1,0 +1,17 @@
+.calendarForm {
+    width: 45em;
+    height: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 425px) {
+    .calendarForm{
+        width: 80vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .calendarForm {
+        width: 35vw;
+    }
+}

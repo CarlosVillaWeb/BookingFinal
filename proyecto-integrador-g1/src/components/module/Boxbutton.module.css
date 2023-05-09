@@ -1,0 +1,19 @@
+.boxbuttonstyle{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@media(max-width: 425px){
+    .boxbuttonstyle{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .boxbuttonstyle {
+        width: 50%;
+    }
+}

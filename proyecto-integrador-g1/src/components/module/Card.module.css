@@ -1,0 +1,158 @@
+.contenedor{
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 45%;
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1%;
+    margin: 2% 0;
+    height: 300px;
+}
+
+.contenedorImagen{
+    border-radius: 10px 0 0 10px ;
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorImagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.contenedorDetalles{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1%;
+    margin:1% 0;
+}
+
+.contendorCategoriaNombre{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-left: 5%;
+    align-items: flex-start;
+}
+
+.categoria{
+    font-weight: 500;
+    font-size: 14px;
+    color: #0071c299;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nombre{
+    color:rgba(96, 125, 139, 1);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ubicacion{
+    color: #0071c299;
+    padding-left: 5%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+.ubicacion span{
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.descripcion {
+    font-weight: 400;
+    padding-left: 5%;
+    text-align: justify;
+    width: 90%;
+    margin: 0;
+}
+
+.descripcion span{
+    color: #0071c299;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.boton{
+    background-color: #FBC02D;
+    color :white;
+    align-self: center;
+    width: 70%;
+    border: 1px solid #FBC02D;
+    border-radius: 5px;
+    padding: 0.6em 1.2em;
+    font-weight: 900;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.5s;
+    margin-bottom: 1vh;
+}
+
+.boton:hover {
+    background-color: rgb(251, 192, 45, 0.5);
+    border: 1px solid rgb(126, 124, 21) ;
+    color:rgb(109, 109, 109, 0.5);
+}
+
+@media (max-width: 425px) {
+    .contenedor{
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .contenedorImagen {
+        width: 100%;
+    }
+
+    .contenedorImagen img {
+        width: 100%;
+    }
+
+    .contenedorDetalles {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .contendorCategoriaNombre {
+        gap: 1px;
+    }
+
+    .categoria {
+        font-size: 12px;
+    }
+
+    .nombre {
+        font-size: 24px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedor {
+        width: 80%;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+
+
+}

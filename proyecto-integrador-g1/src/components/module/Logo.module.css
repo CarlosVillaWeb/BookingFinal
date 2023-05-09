@@ -1,0 +1,23 @@
+.contendeor{
+    width: 20%;
+    margin-left:15px;
+}
+
+.logoclass{
+    display: none;
+    cursor: pointer;
+}
+
+.logoclassphone{
+    display: block;
+}
+
+@media(min-width: 768px){
+    .logoclass{
+        display: inline;
+    }
+
+    .logoclassphone{
+        display: none;
+    }
+}

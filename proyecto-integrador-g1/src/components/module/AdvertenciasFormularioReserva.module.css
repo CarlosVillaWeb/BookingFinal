@@ -1,0 +1,14 @@
+.contenedor{
+    width: 100%;
+    margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mensajeError{
+    font-size:14px;
+    font-weight: 300;
+    color:rgba(255, 0, 0, 0.6);
+}

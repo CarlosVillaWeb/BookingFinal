@@ -1,0 +1,30 @@
+/* Estilos para los botones */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.buttonstyle{
+    display: inline;
+    width: 40%;
+    height: 65%;
+    color: rgba(34, 34, 34, 0.8);
+    border-radius: 5px;
+    border:1px solid rgba(34, 34, 34,0.6);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background: #FBC02D;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttonstyle:hover {
+    background-color: #607D8B;
+    color: white;
+}
+
+@media(max-width: 425px){
+    .buttonstyle{
+        display: none;
+    }
+}

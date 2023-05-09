@@ -1,0 +1,64 @@
+.box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    padding: 1%;
+}
+
+.contenedorAvatar {
+    gap: 40%;
+}
+
+.fabars{
+    display: none;
+    color: #263238;
+}
+
+.contendorIcono{
+    margin-right: 15px;
+}
+
+.boxbuttonstyle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.buttonstyle {
+    width: 40%;
+    height: 38px;
+    color: rgba(34, 34, 34, 0.8);
+    border-radius: 5px;
+    border: 1px solid rgba(34, 34, 34, 0.6);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background: #FBC02D;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media(max-width: 425px){
+    .box{
+        justify-content: space-around;
+        gap:40%;
+        padding: 3% 0;
+    }
+
+    .contenedorIcono{
+        width:10%;
+        text-align: center;
+    }
+
+    .fabars{
+        display: block;
+    }
+
+    .contenedorAvatar{
+        gap:0;
+    }
+}
+

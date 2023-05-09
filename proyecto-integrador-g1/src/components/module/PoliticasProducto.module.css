@@ -1,0 +1,56 @@
+.contenedor{
+    width:100%;
+}
+
+.titulo{
+    width: 100%;
+    color: #607D8B;
+    font-weight: 700;
+    font-size: 2em;
+    border-bottom: 1px solid rgba(96, 125, 139, 0.8);
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.grillaPoliticas{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    width:90%;
+    gap:100px;
+}
+
+.grillaPoliticas ul{
+    color:#0071c299;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+.grillaPoliticas li{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #263238;
+    list-style-type: circle;
+}
+
+@media(max-width:425px){
+    .grillaPoliticas{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+    }
+
+        .grillaPoliticas ul{
+        margin-bottom:0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grillaPoliticas{
+        grid-template-columns: repeat(2, 1fr);
+        gap:10px;
+    }
+}

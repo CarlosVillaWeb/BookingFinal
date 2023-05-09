@@ -1,0 +1,4 @@
+node_modules
+**/application.properties
+*.log
+**/cambios.log

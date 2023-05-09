@@ -1,0 +1,29 @@
+.userbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logocircle {
+    width: 80px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #c6beda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logoinitials {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .username {
+    font-size: 36px;
+    font-weight: bold;
+    color: #7f7494;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+  }

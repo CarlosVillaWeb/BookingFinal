@@ -1,0 +1,9 @@
+.galeriaImagenes {
+    display: none;
+}
+
+@media(max-width:768px){
+    .contenedorImagen{
+        height: 60vh;
+    }
+}

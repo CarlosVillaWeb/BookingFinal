@@ -1,0 +1,52 @@
+.spiner {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bodytemplate{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+}
+
+.homeTitle {
+    font-weight: 700;
+    font-size: 2em;
+    padding: 1em 0 0.5em 1em;
+    color: #607D8B;
+    margin: 0%;
+    align-self: flex-start;
+}
+
+.carousel {
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 5px;
+}
+
+@media (max-width: 425px) {
+    .bodytemplate{
+        flex-wrap: nowrap;
+    }
+
+    .homeTitle {
+        padding: 1em 0 0 0.5em;
+    }
+
+    .carousel {
+        border: 1px solid rgb(38, 50, 56, 0.5);
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .homeTitle {
+        padding: 1em 0 0 1.0em;
+    }
+}

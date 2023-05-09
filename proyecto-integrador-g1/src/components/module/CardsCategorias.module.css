@@ -1,0 +1,23 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* QUERIES FOR PHONE */
+@media(max-width: 425px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid purple;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+}

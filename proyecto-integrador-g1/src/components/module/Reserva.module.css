@@ -1,0 +1,68 @@
+.contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorGrilla{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+    "tituloDatos tituloDatos"
+    "formulario detalleReserva"
+    "calendario detalleReserva"
+    "horario detalleReserva";
+    grid-gap: 40px;
+    margin-bottom: 30px;
+}
+
+.spin{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionCalendario{
+    grid-area: calendario;
+}
+
+.tituloSeccionCalendario{
+    font-weight: 700;
+    font-size: 2em;
+    padding: 1em 0 0.5em 1em;
+    color: #607D8B;
+    margin: 0%;
+
+}
+
+@media (max-width:425px){
+    .contenedorGrilla{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        width: 90%;
+        gap: 1em;
+    }
+    .tituloSeccionCalendario{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedorGrilla{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        gap: 1em;
+    }
+}
+

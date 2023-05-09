@@ -1,0 +1,82 @@
+
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+build_backend:
+    stage: build
+    image:  maven:3.8.6-openjdk-18
+    script:
+        - cd backend
+        - cd ProyectoG1
+        - echo "Building app..."
+        - mvn clean install
+        - echo "Finished building the app."
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - target/ProyectoG1-0.0.1-SNAPSHOT.jar
+    rules:
+        - changes:
+            - backend/**/*
+
+build_frontend:
+    stage: build
+    image: node:latest
+    script:
+        - echo "build the app"
+        - cd proyecto-integrador-g1
+        - ls 
+        - npm --force install
+        - CI=false npm run build
+        - cd dist 
+        - ls
+        - cd ..
+        - pwd
+    artifacts:
+        expire_in: 1 week
+        name: react_build
+        paths:
+        - ./proyecto-integrador-g1/build/
+    rules:
+        - changes:
+            - proyecto-integrador-g1/**/*
+
+
+
+
+deploy_Backend:
+    stage: deploy
+    image: alpine:3.11
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+    script:
+        - echo "Deploying started..."
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl stop proyecto.service"
+        - scp backend/target/ProyectoG1-0.0.1-SNAPSHOT.jar ubuntu@$DEPLOY_SERVER_IP:~/home/ubuntu
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo systemctl start proyecto.service"
+        - echo "Finished deploying the app."
+    rules:
+        - changes:
+            - backend/**/*
+
+deploy_Frontend:
+   stage: deploy
+   needs: [build_frontend]
+   image: python:latest 
+   script:
+      - pip install awscli   
+      - aws configure set aws_secret_key_id $AWS_ACCESS_KEY_ID
+      - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+      - aws s3 sync proyecto-integrador-g1/build/ s3://grupo1-frontbookin
+   rules:
+        - changes:
+            - proyecto-integrador-g1/**/*
+
